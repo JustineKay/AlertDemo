@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="hDN-2a-KWj">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H4E-Jp-vo6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="button-pressed.png"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="LnF-dO-rR1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="hDN-2a-KWj" secondAttribute="bottom" id="2s0-ju-D54"/>
+                            <constraint firstAttribute="centerY" secondItem="H4E-Jp-vo6" secondAttribute="centerY" id="Oov-xY-axR"/>
+                            <constraint firstItem="hDN-2a-KWj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="WH8-Rt-0eN"/>
+                            <constraint firstAttribute="trailing" secondItem="hDN-2a-KWj" secondAttribute="trailing" id="Zym-q4-Lu0"/>
+                            <constraint firstAttribute="centerX" secondItem="H4E-Jp-vo6" secondAttribute="centerX" id="h5k-JY-JVd"/>
+                            <constraint firstItem="hDN-2a-KWj" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="haF-bR-xC8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="H4E-Jp-vo6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Oov-xY-axR"/>
+                                <exclude reference="h5k-JY-JVd"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="H4E-Jp-vo6"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Oov-xY-axR"/>
+                                <include reference="h5k-JY-JVd"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background.png" width="320" height="461"/>
+        <image name="button-pressed.png" width="178" height="178"/>
+        <image name="button.png" width="178" height="178"/>
+    </resources>
+</document>
